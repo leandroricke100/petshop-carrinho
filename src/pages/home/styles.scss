@@ -1,3 +1,4 @@
+// styles.scss
 .container-main {
   width: 100%;
   max-width: 1280px;
@@ -18,17 +19,12 @@
     gap: 24px;
 
     @media (min-width: 768px) {
-      .md\:grid-cols-2 {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-      }
+      grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
-    @media (min-width: 1280px) {
-      .lg\:grid-cols-5 {
-        grid-template-columns: repeat(5, minmax(0, 1fr));
-      }
+    @media (min-width: 1024px) {
+      grid-template-columns: repeat(5, minmax(0, 1fr));
     }
-
     .itens {
       width: 100%;
 
@@ -50,18 +46,19 @@
         align-items: center;
 
         .price {
-          color: rgb(24 24 27 / 0.9);
+          color: rgba(24, 24, 27, 0.9);
         }
 
         .button-cart {
           border: none;
           font-size: 20px;
-          background-color: rgb(24 24 27);
+          background-color: rgb(24, 24, 27);
           color: #fff;
           border-radius: 4px;
           display: flex;
           align-items: center;
           justify-content: center;
+          cursor: pointer;
         }
       }
     }
