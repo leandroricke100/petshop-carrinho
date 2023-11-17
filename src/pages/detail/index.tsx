@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import { useState, useEffect, useContext } from "react";
 import { ProductsProps } from "../home";
 import { api } from "../../services/api";
@@ -9,6 +9,7 @@ import { CartContext } from "../../components/contexts";
 export function Detail() {
   const { addItemCart } = useContext(CartContext);
   const { id } = useParams();
+  const navigate = useNavigate();
   const [product, setProduct] = useState<ProductsProps>();
 
   useEffect(() => {
@@ -23,6 +24,7 @@ export function Detail() {
 
   function handleAddItem(item: ProductsProps) {
     addItemCart(item);
+    navigate("/");
   }
 
   return (
