@@ -1,0 +1,56 @@
+.container {
+  width: 100%;
+  max-width: 1280px;
+  padding: 0 16px;
+  margin: 24px auto 24px auto;
+
+  .container-items {
+    width: 100%;
+
+    .items {
+      display: flex;
+      flex-direction: column;
+
+      img {
+        flex: 1 1 0%;
+        width: 100%;
+        max-height: 288px;
+        object-fit: contain;
+        margin-top: 20px;
+      }
+
+      @media (min-width: 1024px) {
+        flex-direction: row;
+      }
+
+      .container-description {
+        flex: 1 1 0%;
+
+        .title {
+          font-weight: bold;
+          font-size: 24px;
+          margin-top: 16px;
+          margin-bottom: 8px;
+        }
+
+        .description {
+          margin-bottom: 16px;
+        }
+        .price {
+          color: rgb(63 63 70 / 0.9);
+          font-size: 20px;
+        }
+
+        .button {
+          border: none;
+          font-size: 20px;
+          background-color: rgb(24, 24, 27);
+          color: #fff;
+          border-radius: 4px;
+          cursor: pointer;
+          margin-left: 12px;
+        }
+      }
+    }
+  }
+}

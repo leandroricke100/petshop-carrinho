@@ -3,6 +3,7 @@ import { BsCartPlus } from "react-icons/bs";
 import { useState, useEffect, useContext } from "react";
 import { api } from "../../services/api";
 import { CartContext } from "../../components/contexts";
+import { Link } from "react-router-dom";
 
 export interface ProductsProps {
   id: number;
@@ -38,8 +39,10 @@ export function Home() {
         <div className="container-itens">
           {products.map((product) => (
             <section key={product.id} className="itens">
-              <img src={product.cover} alt={product.title} />
-              <p className="title-item">{product.title}</p>
+              <Link to={`/detail/${product.id}`} className="title-link">
+                <img src={product.cover} alt={product.title} />
+                <p className="title-item">{product.title}</p>
+              </Link>
 
               <div className="container-price">
                 <strong className="price">

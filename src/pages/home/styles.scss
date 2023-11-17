@@ -33,7 +33,10 @@
         border-radius: 8px;
         margin-bottom: 8px;
       }
-
+      a.title-link {
+        text-decoration: none !important;
+        color: inherit;
+      }
       .title-item {
         font-weight: 500;
         margin-top: 4px;
